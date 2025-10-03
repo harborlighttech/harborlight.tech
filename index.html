@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>Harbor Light Technologies | Expert Data Solutions</title>
+    <title>Harbor Light Technologies | Expert Data Solutions</title>
     <link rel="icon" type="image/png" href="images/logo.png">
     <style>
         * {
@@ -325,7 +325,7 @@
 
     <section id="home" class="hero">
         <h1>Guiding Your Digital Transformation</h1>
-        <p>Expert software consulting services to illuminate your path to success</p>
+        <p>Turning complex data into connected intelligence</p>
         <a href="#contact" class="cta-button">Get Started</a>
     </section>
 
@@ -333,34 +333,46 @@
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">💻</div>
-                <h3>Custom Development</h3>
-                <p>Tailored software solutions built to meet your unique business requirements with cutting-edge technologies.</p>
+                <div class="service-icon">🌐</div>
+                <h3>Enterprise Knowledge Graphs</h3>
+                <p>Implementing scalable Enterprise Knowledge Graphs that unify data, 
+                    relationships, and meaning—empowering organizations with a trusted foundation 
+                    for AI, analytics, and decision-making.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">☁️</div>
-                <h3>Cloud Architecture</h3>
-                <p>Design and implement scalable cloud infrastructure that grows with your business needs.</p>
-            </div>
+                <div class="service-icon">🧩</div>
+                <h3>Ontology Development</h3>
+                <p>Creating domain-driven conceptual models and ontologies that bring clarity, 
+                    consistency, and semantic precision to your data, enabling interoperability 
+                    across systems and teams.</p>
+            </div
+
             <div class="service-card">
-                <div class="service-icon">🔒</div>
-                <h3>Security Consulting</h3>
-                <p>Protect your digital assets with comprehensive security audits and best practices implementation.</p>
+                <div class="service-icon">✨</div>
+                <h3>Intelligent Applications</h3>
+                <p>Leveraging knowledge graphs, we enable advanced semantic search and AI-driven applications that provide richer, context-aware insights across your enterprise.</p>
             </div>
+            
             <div class="service-card">
-                <div class="service-icon">📊</div>
-                <h3>Data Analytics</h3>
-                <p>Transform raw data into actionable insights that drive informed business decisions.</p>
+                <div class="service-icon">🔗</div>
+                <h3>API & Data Integration</h3>
+                <p>Building robust APIs and integration pipelines to connect legacy systems, 
+                    modern platforms, and semantic data layers—ensuring your knowledge graph 
+                    seamlessly fits into your digital ecosystem.</p>
             </div>
+    
             <div class="service-card">
-                <div class="service-icon">🚀</div>
-                <h3>DevOps Solutions</h3>
-                <p>Streamline your development pipeline with modern CI/CD practices and automation.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎯</div>
+                <div class="service-icon">🏛️</div>
                 <h3>Technical Strategy</h3>
-                <p>Strategic technology planning and roadmap development aligned with your business goals.</p>
+                <p>Helping enterprises architect sustainable, future-ready data platforms—balancing innovation 
+                    with maintainability to ensure your semantic technology investments deliver long-term value.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Data Governance</h3>
+                <p>Establishing governance models and stewardship practices to keep their data assets accurate, 
+                    consistent, and aligned with business needs.</p>
             </div>
         </div>
     </section>
@@ -368,9 +380,8 @@
     <section id="about">
         <div class="about-content">
             <h2>About Harbor Light Technologies</h2>
-            <h3>Your Trusted Technology Partner</h3>
-            <p>We are experienced software engineers and consultants dedicated to helping businesses navigate the complex world of technology. Like a lighthouse guiding ships safely to shore, we illuminate the path to successful digital transformation.</p>
-            <p>With years of combined experience across diverse industries, we bring deep technical expertise and strategic insight to every project we undertake.</p>
+            <p>We help organizations navigate complexity, uniting enterprise data into a trusted, connected resource that drives smarter decisions. 
+                Like a lighthouse guiding ships safely to shore, we illuminate the path toward enterprise data centricity — connected, trusted, and actionable.</p>
         </div>
         <div class="stats">
             <div class="stat">
@@ -378,11 +389,11 @@
                 <div class="stat-label">Projects Delivered</div>
             </div>
             <div class="stat">
-                <div class="stat-number">15+</div>
+                <div class="stat-number">25+</div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat">
-                <div class="stat-number">98%</div>
+                <div class="stat-number">100%</div>
                 <div class="stat-label">Client Satisfaction</div>
             </div>
         </div>
@@ -390,7 +401,7 @@
 
     <section id="contact" class="contact">
         <h2>Get In Touch</h2>
-        <form>
+        <form action="https://formspree.io/f/xwprbjkn" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -412,10 +423,13 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Harbor Light Technologies. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2025</span> Harbor Light Technologies. All rights reserved.</p>
     </footer>
 
     <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
