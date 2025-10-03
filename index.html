@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harbor Light Technologies</title>
+    <title></title>Harbor Light Technologies | Expert Data Solutions</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <style>
         * {
             margin: 0;
@@ -11,528 +12,410 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --sage-green: #6b8f8c;
+            --dark-teal: #2d5a61;
+            --bright-teal: #4db8b8;
+            --light-bg: #f5f7f6;
+            --white: #ffffff;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #37474F;
-            overflow-x: hidden;
+            color: #333;
         }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #37474F 0%, #455A64 50%, #26A69A 100%);
-            color: white;
-            padding: 2rem 0;
-            position: relative;
-            overflow: hidden;
+        header {
+            background: linear-gradient(135deg, var(--sage-green) 0%, var(--dark-teal) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(78, 205, 196, 0.1) 0%, transparent 70%);
-            animation: wave 15s ease-in-out infinite;
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: rotate(0deg) translate(0, 0); }
-            50% { transform: rotate(180deg) translate(-20px, -20px); }
-        }
-
-        .container {
+        nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            animation: glow 3s ease-in-out infinite alternate;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMjUwIiBmaWxsPSIjNkI5MDgwIi8+CjxwYXRoIGQ9Ik0yNTAgNDBMMzUwIDIwMEgxNTBMMjUwIDQwWiIgZmlsbD0iIzZCOTA4MCIvPgo8cGF0aCBkPSJNMjEwIDEwMEwxNDAgMjUwSDIwMFYxMDBIMjEwWiIgZmlsbD0iIzZCOTA4MCIvPgo8cGF0aCBkPSJNMjkwIDEwMEwzNjAgMjUwSDMwMFYxMDBIMjkwWiIgZmlsbD0iIzZCOTA4MCIvPgo8cmVjdCB4PSIyMDAiIHk9IjEwMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIzNjAiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMzNzQ3NEYiIHN0cm9rZS13aWR0aD0iNCIvPgo8cmVjdCB4PSIyMTAiIHk9IjEyMCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjI0MCIgZmlsbD0iIzRFQ0RDNCIvPgo8cmVjdCB4PSIyMjAiIHk9IjE0MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMzc0NzRGIi8+CjxyZWN0IHg9IjIyMCIgeT0iMjAwIiB3aWR0aD0iNjAiIGhlaWdodD0iNDAiIGZpbGw9IiMzNzQ3NEYiLz4KPHJlY3QgeD0iMjIwIiB5PSIyNjAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzM3NDc0RiIvPgo8cmVjdCB4PSIyMjAiIHk9IjMyMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMzc0NzRGIi8+CjxyZWN0IHg9IjIyNSIgeT0iNzAiIHdpZHRoPSI1MCIgaGVpZ2h0PSIzMCIgZmlsbD0iIzM3NDc0RiIvPgo8Y2lyY2xlIGN4PSIxNTAiIGN5PSI4MCIgcj0iNCIgZmlsbD0id2hpdGUiLz4KPGNpcmNsZSBjeD0iMzUwIiBjeT0iMTAwIiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI4MCIgY3k9IjE2MCIgcj0iNCIgZmlsbD0id2hpdGUiLz4KPGNpcmNsZSBjeD0iNDIwIiBjeT0iMTQwIiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIyNDAiIHI9IjQiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjQwMCIgY3k9IjIyMCIgcj0iNCIgZmlsbD0id2hpdGUiLz4KPGNpcmNsZSBjeD0iODAiIGN5PSIzMDAiIHI9IjQiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjQyMCIgY3k9Ij
-        }
-
-        @keyframes glow {
-            from { box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3); }
-            to { box-shadow: 0 10px 40px rgba(78, 205, 196, 0.6); }
-        }
-
-        @keyframes beacon {
-            0%, 100% { opacity: 0.3; transform: rotate(0deg); }
-            50% { opacity: 0.8; transform: rotate(15deg); }
-        }
-
-        .header-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .header-text h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #4ECDC4, white);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .header-text .tagline {
-            font-size: 1.3rem;
-            font-weight: 300;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-        }
-
-        /* Navigation */
-        .nav {
-            background: rgba(55, 71, 79, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 2px solid #4ECDC4;
-        }
-
-        .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
         }
 
-        .nav-links {
+        .logo {
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
             list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #4ECDC4;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: #4ECDC4;
-        }
-
-        /* Main Content */
-        .main {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%);
-        }
-
-        .hero-section {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .hero-section h2 {
-            font-size: 2.5rem;
-            color: #37474F;
-            margin-bottom: 1rem;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
-            color: #6B9080;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            line-height: 1.8;
-        }
-
-        /* Services Grid */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin: 4rem 0;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--bright-teal);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--sage-green) 0%, var(--dark-teal) 100%);
+            color: var(--white);
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--bright-teal);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(77, 184, 184, 0.4);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--dark-teal);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services {
+            background: var(--light-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
-            background: white;
+            background: var(--white);
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(55, 71, 79, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #4ECDC4, #26A69A);
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(55, 71, 79, 0.15);
-        }
-
-        .service-card h3 {
-            color: #37474F;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-card p {
-            color: #6B9080;
-            line-height: 1.6;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #4ECDC4, #26A69A);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 3rem;
             margin-bottom: 1rem;
-            color: white;
+            color: var(--bright-teal);
+        }
+
+        .service-card h3 {
+            color: var(--dark-teal);
+            margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
-        /* About Section */
         .about {
-            background: white;
-            padding: 4rem 0;
-        }
-
-        .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
         }
 
-        .about-image {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, #4ECDC4, #26A69A);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-image::before {
-            content: '⚓';
-            font-size: 8rem;
-            color: white;
-            opacity: 0.8;
-        }
-
-        .about-text h2 {
-            color: #37474F;
+        .about-content h3 {
+            color: var(--dark-teal);
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            font-size: 2.5rem;
         }
 
-        .about-text p {
-            color: #6B9080;
+        .about-content p {
             margin-bottom: 1rem;
-            line-height: 1.8;
+            color: #555;
             font-size: 1.1rem;
         }
 
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, #37474F 0%, #26A69A 100%);
-            color: white;
-            padding: 4rem 0;
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
             text-align: center;
-            position: relative;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 10px;
         }
 
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
-        }
-
-        .contact-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .contact h2 {
+        .stat-number {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-weight: bold;
+            color: var(--bright-teal);
         }
 
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+        .stat-label {
+            color: var(--dark-teal);
+            font-weight: 500;
         }
 
-        .contact-email {
-            font-size: 1.3rem;
-            color: #4ECDC4;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+        .contact {
+            background: var(--light-bg);
         }
 
-        .contact-email:hover {
-            color: white;
-            text-shadow: 0 0 10px #4ECDC4;
+        form {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Footer Enhanced */
-        .footer {
-            background: #37474F;
-            color: white;
-            text-align: center;
-            padding: 2.5rem 0;
-            position: relative;
+        .form-group {
+            margin-bottom: 1.5rem;
         }
 
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-teal);
+            font-weight: 500;
+        }
+
+        input, textarea {
             width: 100%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #4ECDC4, transparent);
-        }
-
-        .footer p {
-            opacity: 0.8;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
             font-size: 1rem;
-            font-weight: 400;
+            transition: border-color 0.3s;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--bright-teal);
+        }
 
-            .header-text h1 {
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 1rem;
+            background: var(--sage-green);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background: var(--dark-teal);
+        }
+
+        footer {
+            background: var(--dark-teal);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .nav-links {
-                flex-direction: column;
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
                 gap: 1rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .services {
+            .about {
                 grid-template-columns: 1fr;
             }
-        }
 
-        /* Floating particles effect */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
+            .stats {
+                grid-template-columns: 1fr;
+            }
 
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #4ECDC4;
-            border-radius: 50%;
-            opacity: 0.6;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
-            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+            h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="particles">
-        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
-        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
-        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
-        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
-        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
-        <div class="particle" style="left: 70%; animation-delay: 0.5s;"></div>
-        <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
-        <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
-    </div>
-
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo"></div>
-                <div class="header-text">
-                    <h1>Harbor Light Technologies</h1>
-                    <p class="tagline">Guiding innovations through the digital waters</p>
-                </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Harbor Light Technologies Logo">
+                <span>Harbor Light Technologies</span>
             </div>
-        </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="nav-links">
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <section id="home" class="hero">
+        <h1>Guiding Your Digital Transformation</h1>
+        <p>Expert software consulting services to illuminate your path to success</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Custom Development</h3>
+                <p>Tailored software solutions built to meet your unique business requirements with cutting-edge technologies.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud Architecture</h3>
+                <p>Design and implement scalable cloud infrastructure that grows with your business needs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Security Consulting</h3>
+                <p>Protect your digital assets with comprehensive security audits and best practices implementation.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Data Analytics</h3>
+                <p>Transform raw data into actionable insights that drive informed business decisions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>DevOps Solutions</h3>
+                <p>Streamline your development pipeline with modern CI/CD practices and automation.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Technical Strategy</h3>
+                <p>Strategic technology planning and roadmap development aligned with your business goals.</p>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main class="main">
-        <div class="container">
-            <section class="hero-section">
-                <h2>Accelerating Digital Innovation</h2>
-                <p class="hero-description">
-                    Expanding the community of developers and businesses leveraging cutting-edge cloud-optimized solutions and conducting scalable development with modern frameworks that work effectively on laptops, enterprise systems, and cloud infrastructure.
-                </p>
-            </section>
-
-            <section id="services" class="services">
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>Digital Transformation</h3>
-                    <p>Comprehensive onboarding and training for scalable digital solutions, helping organizations navigate the complex waters of modern technology.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-                    <h3>Technical Support</h3>
-                    <p>Expert support and troubleshooting for your digital infrastructure, ensuring smooth sailing through technical challenges.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">☁️</div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Creating and distributing cloud-optimized applications and data solutions that scale with your business needs.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Technology Consulting</h3>
-                    <p>Strategic consulting services to help you choose the right technology stack and implementation approach for your projects.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Performance Optimization</h3>
-                    <p>Deployment of high-performance infrastructure for scalable computing, enabling efficient big data workflows and processing.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🌊</div>
-                    <h3>Scalable Architecture</h3>
-                    <p>Enabling scalable big data workflows and enterprise-grade solutions that grow with your organization's ambitions.</p>
-                </div>
-            </section>
+    <section id="about">
+        <div class="about-content">
+            <h2>About Harbor Light Technologies</h2>
+            <h3>Your Trusted Technology Partner</h3>
+            <p>We are experienced software engineers and consultants dedicated to helping businesses navigate the complex world of technology. Like a lighthouse guiding ships safely to shore, we illuminate the path to successful digital transformation.</p>
+            <p>With years of combined experience across diverse industries, we bring deep technical expertise and strategic insight to every project we undertake.</p>
         </div>
-    </main>
-
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image"></div>
-                <div class="about-text">
-                    <h2>Our Mission</h2>
-                    <p>
-                        Harbor Light Technologies serves as your beacon in the ever-changing digital landscape. Like a lighthouse guides ships safely to harbor, we guide organizations through their digital transformation journey.
-                    </p>
-                    <p>
-                        With deep expertise in cloud technologies, scalable architectures, and modern development frameworks, we help businesses navigate the complexities of digital innovation while maintaining focus on practical, results-driven solutions.
-                    </p>
-                    <p>
-                        Our approach combines cutting-edge technology with proven methodologies, ensuring that every solution we deliver not only meets today's needs but is built to evolve with tomorrow's opportunities.
-                    </p>
-                </div>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2>Ready to Set Sail?</h2>
-                <p>Let's discuss how Harbor Light Technologies can illuminate the path to your digital transformation.</p>
-                <a href="mailto:info@harborlighttech.com" class="contact-email">info@harborlighttech.com</a>
+        <h2>Get In Touch</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Harbor Light Technologies. Guiding your digital journey.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Harbor Light Technologies. All rights reserved.</p>
     </footer>
 
     <script>
-        // Add smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -546,47 +429,11 @@
             });
         });
 
-        // Add intersection observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe service cards for animation
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
         });
-
-        // Dynamic particle animation
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = '100%';
-            particle.style.animationDelay = Math.random() * 2 + 's';
-            particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            
-            document.querySelector('.particles').appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-            }, 6000);
-        }
-
-        // Create particles periodically
-        setInterval(createParticle, 2000);
     </script>
 </body>
 </html>
