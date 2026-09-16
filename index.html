@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harbor Light Technologies | Expert Data Solutions</title>
+    <meta name="description" content="Harbor Light Technologies unites enterprise data into a trusted, connected resource through knowledge graphs, ontology development, data integration, and governance.">
+    <meta name="theme-color" content="#14303a">
+    <link rel="canonical" href="https://harborlight.tech/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Harbor Light Technologies">
+    <meta property="og:description" content="Guiding your data transformation. Turning complex data into connected intelligence.">
+    <meta property="og:url" content="https://harborlight.tech/">
+    <meta property="og:image" content="https://harborlight.tech/images/logo.png">
+    <meta name="twitter:card" content="summary">
+
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5Q4VRWN6X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -87,7 +103,7 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Data Governance",
-                  "description": "Establishing governance models and stewardship practices to keep their data assets accurate, consistent, and aligned with business needs.",
+                  "description": "Establishing governance models and stewardship practices to keep your data assets accurate, consistent, and aligned with business needs.",
                   "serviceType": "Data Management"
                 }
               }
@@ -124,170 +140,171 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Harbor Light Technologies Logo">
-                <span>Harbor Light Technologies</span>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+        <nav class="nav" aria-label="Main">
+            <a class="brand" href="#home">
+                <img src="images/logo-mark.png" alt="" width="40" height="40">
+                <span>Harbor Light <span class="brand-sub">Technologies</span></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span class="menu-toggle-bars" aria-hidden="true"></span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Contact us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h1>Guiding Your Data Transformation</h1>
-        <p>Turning complex data into connected intelligence</p>
-        <a href="#contact" class="cta-button">Get Started</a>
-    </section>
+    <main id="main">
+        <section id="home" class="hero">
+            <canvas class="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero-inner">
+                <h1>Guiding your data transformation</h1>
+                <p class="hero-lede">Turning complex data into connected intelligence. We build the knowledge graphs, ontologies, and integrations that let your organization see its data clearly.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="button button-primary">Start a conversation</a>
+                    <a href="#services" class="button button-ghost">Explore our services</a>
+                </div>
+            </div>
+            <svg class="hero-water" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+                <rect y="4" width="1200" height="4"/>
+                <rect y="18" width="1200" height="5"/>
+                <rect y="33" width="1200" height="6"/>
+                <rect y="49" width="1200" height="11"/>
+            </svg>
+        </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🌐</div>
-                <h3>Enterprise Knowledge Graphs</h3>
-                <p>Implementing scalable Enterprise Knowledge Graphs that unify data, 
-                    relationships, and meaning—empowering organizations with a trusted foundation 
-                    for AI, analytics, and decision-making.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🧩</div>
-                <h3>Ontology Development</h3>
-                <p>Creating domain-driven conceptual models and ontologies that bring clarity, 
-                    consistency, and semantic precision to your data, enabling interoperability 
-                    across systems and teams.</p>
-            </div>
+        <section id="services" class="services">
+            <div class="container services-layout">
+                <div class="services-intro">
+                    <h2>What we do</h2>
+                    <p>From the first conceptual model to the applications built on top of it, we help you turn scattered systems into one trusted picture of your enterprise.</p>
+                    <a href="#contact" class="text-link">Talk through your project</a>
+                </div>
 
-            <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Intelligent Applications</h3>
-                <p>Leveraging knowledge graphs, we enable advanced semantic search and AI-driven applications 
-                    that provide richer, context-aware insights across your enterprise.</p>
+                <ul class="service-list">
+                    <li class="service">
+                        <svg class="service-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="7" cy="9" r="3"/><circle cx="25" cy="7" r="3"/><circle cx="16" cy="24" r="3"/><circle cx="26" cy="21" r="2"/><path d="M10 9.5 22 7.5M8.6 11.6l5.8 9.8M23.8 9.8l-6.6 11.5M18.9 23.3l5.2-1.6M25 9.9l.8 9"/></svg>
+                        <div>
+                            <h3>Enterprise knowledge graphs</h3>
+                            <p>Scalable knowledge graphs that unify data, relationships, and meaning, giving your organization a trusted foundation for AI, analytics, and decision-making.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <svg class="service-icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="12" y="3" width="8" height="6" rx="1.5"/><rect x="3" y="23" width="8" height="6" rx="1.5"/><rect x="12" y="23" width="8" height="6" rx="1.5"/><rect x="21" y="23" width="8" height="6" rx="1.5"/><path d="M16 9v14M7 23v-5h18v5"/></svg>
+                        <div>
+                            <h3>Ontology development</h3>
+                            <p>Domain-driven conceptual models and ontologies that bring clarity, consistency, and semantic precision to your data, so systems and teams can work together.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <svg class="service-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="8"/><path d="m19 19 9 9"/><path d="M13 8.5v9M8.5 13h9"/></svg>
+                        <div>
+                            <h3>Intelligent applications</h3>
+                            <p>Semantic search and AI-driven applications built on your knowledge graph, delivering richer, context-aware insight across the enterprise.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <svg class="service-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 11h17M16 6l5 5-5 5"/><path d="M28 21H11M16 16l-5 5 5 5"/></svg>
+                        <div>
+                            <h3>API &amp; data integration</h3>
+                            <p>Robust APIs and integration pipelines that connect legacy systems, modern platforms, and semantic data layers, so your knowledge graph fits into the ecosystem you already have.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <svg class="service-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="m20.5 11.5-3 6-6 3 3-6z"/></svg>
+                        <div>
+                            <h3>Technical strategy</h3>
+                            <p>Sustainable, future-ready data platform architecture that balances innovation with maintainability, so your semantic technology investment keeps paying off.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <svg class="service-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 5 7v8c0 7 5 12 11 14 6-2 11-7 11-14V7z"/><path d="m11 16 3.5 3.5L21 13"/></svg>
+                        <div>
+                            <h3>Data governance</h3>
+                            <p>Governance models and stewardship practices that keep your data assets accurate, consistent, and aligned with business needs.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🔗</div>
-                <h3>API & Data Integration</h3>
-                <p>Building robust APIs and integration pipelines to connect legacy systems, 
-                    modern platforms, and semantic data layers—ensuring your knowledge graph 
-                    seamlessly fits into your digital ecosystem.</p>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-layout">
+                <h2 class="about-heading">About Harbor Light Technologies</h2>
+                <blockquote class="about-statement">
+                    <p>Like a lighthouse guiding ships safely to shore, we illuminate the path toward enterprise data centricity: connected, trusted, and actionable.</p>
+                </blockquote>
+                <div class="about-body">
+                    <p>We help organizations navigate complexity, uniting enterprise data into a trusted, connected resource that drives smarter decisions.</p>
+                    <p>Founded by Adam Shepherd, we work with organizations across the United States and Canada.</p>
+                </div>
+                <dl class="stats">
+                    <div class="stat">
+                        <dt>Projects delivered</dt>
+                        <dd>50+</dd>
+                    </div>
+                    <div class="stat">
+                        <dt>Years of experience</dt>
+                        <dd>25+</dd>
+                    </div>
+                    <div class="stat">
+                        <dt>Client satisfaction</dt>
+                        <dd>100%</dd>
+                    </div>
+                </dl>
             </div>
-    
-            <div class="service-card">
-                <div class="service-icon">🏛️</div>
-                <h3>Technical Strategy</h3>
-                <p>Helping enterprises architect sustainable, future-ready data platforms—balancing innovation 
-                    with maintainability to ensure your semantic technology investments deliver long-term value.</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-layout">
+                <div class="contact-intro">
+                    <h2>Get in touch</h2>
+                    <p>Tell us where your data is today and where you want it to be.</p>
+                    <p class="contact-direct">Prefer email? <a href="mailto:contact@harborlight.tech">contact@harborlight.tech</a></p>
+                </div>
+
+                <form class="contact-form" action="https://formspree.io/f/xwprbjkn" method="POST">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="field field-wide">
+                        <label for="company">Company <span class="optional">(optional)</span></label>
+                        <input type="text" id="company" name="company" autocomplete="organization">
+                    </div>
+                    <div class="field field-wide">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-footer field-wide">
+                        <button type="submit" class="button button-primary">Send message</button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
             </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🛡️</div>
-                <h3>Data Governance</h3>
-                <p>Establishing governance models and stewardship practices to keep their data assets accurate, 
-                    consistent, and aligned with business needs.</p>
-            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand brand-footer" href="#home">
+                <img src="images/logo-mark.png" alt="" width="32" height="32">
+                <span>Harbor Light Technologies</span>
+            </a>
+            <p>&copy; <span id="current-year">2026</span> Harbor Light Technologies LLC. All rights reserved.</p>
         </div>
-    </section>
-
-    <section id="about">
-        <div class="about-content">
-            <h2>About Harbor Light Technologies</h2>
-            <p>We help organizations navigate complexity, uniting enterprise data into a trusted, connected resource that drives smarter decisions. 
-                Like a lighthouse guiding ships safely to shore, we illuminate the path toward enterprise data centricity — connected, trusted, and actionable.</p>
-        </div>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">25+</div>
-                <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Client Satisfaction</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <form action="https://formspree.io/f/xwprbjkn" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company">
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; <span id="current-year">2025</span> Harbor Light Technologies. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Hamburger menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('nav ul');
-        
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        document.querySelector('form').addEventListener('submit', function(e) {
-            //e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-        //    this.reset();
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
